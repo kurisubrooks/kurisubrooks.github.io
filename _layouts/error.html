@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+    <main>
+        <div class="block">
+            <div class="first">
+                <h1 style="padding:0.35em 0;margin:0;">{{ page.error }}</h1>
+                <h3 style="padding:0.25em 0;margin:0;">{{ page.error_msg }}</h3>
+
+            </div>
+            <div class="middle center">
+                <p>
+                    {{ page.message }}
+                    <br>
+                    <a href="/">Back to the common room?</a>
+                </p>
+            </div>
+
+            {% include footer.html %}
+        </div>
+    </main>
+</body>
+</html>

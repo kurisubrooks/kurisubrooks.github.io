@@ -1,0 +1,70 @@
+.dropoff {
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            background: #FAFAFA;
+            padding: 1.5em 2.5em;
+
+            &:not(:first-child) {
+                border-top: 1px solid #DDDDDD;
+            }
+
+            h1, h2, h3 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            img {
+                margin-right: 8px;
+
+                &#shake {
+                    @include border-radius(50%);
+                }
+            }
+        }
+    }
+
+    /*text-align: center;
+
+    .section {
+        padding: 10px 0;
+
+        .header {
+            h3 {
+                margin: 0.2em;
+            }
+
+            img {
+                margin-top: 6px;
+                @include border-radius(50%);
+            }
+        }
+
+        .content {
+            p {
+                margin: 10px 0 0;
+                text-align: justify;
+
+                @media (max-width: $breakpoint) {
+                    text-align: center !important;
+                }
+            }
+
+            .action {
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+
+    #shake-card {
+        @media (max-width: $breakpoint) {
+            border-bottom: 1px solid #EEEEEE;
+            border-right: none;
+        }
+    }*/
+}

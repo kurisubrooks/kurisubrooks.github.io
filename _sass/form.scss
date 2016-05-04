@@ -1,0 +1,28 @@
+input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    width: 280px;
+
+    border: 1px solid $border-color;
+    padding: 0.75em 1em;
+
+    @include border-radius(0.3em);
+    @include transition(150ms);
+    @media (max-width: $extend) {
+        width: 92%;
+    }
+}
+
+textarea {
+    height: 80px;
+}
+
+.recaptcha {
+    @media (max-width: $extend) {
+        text-align: center;
+    }
+}

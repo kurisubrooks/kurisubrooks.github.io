@@ -1,0 +1,35 @@
+.row {
+    &::before, &::after {
+        content: " ";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    .grid {
+        float: left;
+        padding: inherit 1.5%;
+
+        @media (max-width: $breakpoint) {
+            width: auto !important;
+            padding: inherit 10px;
+            display: block;
+            float: none;
+        }
+
+        &.col-1 {  width: 5.83333%; }
+        &.col-2 {  width: 14.16667%; }
+        &.col-3 {  width: 22.50%; }
+        &.col-4 {  width: 30.83333%; }
+        &.col-5 {  width: 39.16667%; }
+        &.col-6 {  width: 46.50%; }
+        &.col-7 {  width: 55.83333%; }
+        &.col-8 {  width: 64.16667%; }
+        &.col-9 {  width: 72.50%; }
+        &.col-10 { width: 80.83333%; }
+        &.col-11 { width: 89.16667%; }
+        &.col-12 { width: 97.50%; }
+    }
+}

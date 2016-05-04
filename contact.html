@@ -1,0 +1,33 @@
+---
+layout: default
+title: Contact - Kurisu
+path: Contact
+color: "#FFDF71"
+social: true
+---
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>window.onload = function() { document.getElementById('url').value = window.location.href; };</script>
+
+<h3>Contact</h3>
+
+<form action="http://kurisu.kyufox.com/mail.php" method="POST">
+    <input name="return" type="hidden" id="url" value="">
+    <h5>Name</h5>
+    <input type="text" name="name" placeholder="Full Name" required>
+    <br><br>
+    <h5>Email</h5>
+    <input type="email" name="from" placeholder="user@example.com" required>
+    <br><br>
+    <h5>Subject</h5>
+    <input type="text" name="sub" placeholder="Subject" required>
+    <br><br>
+    <h5>Message</h5>
+    <textarea name="msg" placeholder="Message" required></textarea>
+    <br><br>
+    <div class="recaptcha">
+        <div class="g-recaptcha" data-sitekey="6Lc--B4TAAAAAFuXD0im8d78TxgeLr2w-Doo_ZWf"></div>
+    </div>
+    <br>
+    <input class="button thick square" type="submit" value="Submit">
+</form>

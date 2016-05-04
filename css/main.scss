@@ -1,0 +1,65 @@
+---
+# /css/main.css
+---
+
+@charset "UTF-8";
+
+$font: "Montserrat", "Roboto", "Noto Sans JP", Helvetica, sans-serif;
+$font-size: 14px;
+$font-weight: 400;
+$line-height: 24px;
+
+$breakpoint: 860px;
+$collapse: 722px;
+$extend: 560px;
+$max-width: 980px;
+
+$text-color:        #555555;
+$background-color:  #61AED5;
+$border-color:      #DDDDDD;
+
+$background-top:    #FFFFFF;
+$background-mid:    #FAFAFA;
+$background-bot:    #EEEEEE;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+         -o-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin transition($time: 150ms) {
+    transition: ease $time;
+    -moz-transition: ease $time;
+    -webkit-transition: ease $time;
+}
+
+body {
+    font-family: $font;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    background: $background-color;
+    color: $text-color;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+@import "normalize.css",
+        "syntax-highlighting",
+        "core",
+        "text",
+        "alert",
+        "button",
+        "form",
+        "dropoff",
+        "grid";

@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+#alt {
+    background-color: $background-top;
+}
+
+#projects {
+    background-color: $background-top;
+}
+
+#shake-card {
+    border-right: 1px solid $border-color;
+}
+
+svg {
+    &#fix {
+        float: left;
+        fill: #555555;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    margin: 4em auto;
+    padding: 0 20px;
+    max-width: $max-width;
+    background: transparent;
+    transition: ease 150ms;
+    -webkit-transition: ease 150ms;
+
+    @media (max-width: $collapse) {
+        margin: 2em auto !important;
+        padding: 0 !important;
+    }
+
+    .block {
+        box-shadow: 0px 4px 13px -2px rgba(0, 0, 0, 0.25);
+
+        &.full {
+            margin: 0 !important;
+        }
+
+        .first {
+            background: $background-top;
+            text-align: center;
+            padding: 1em 1.5em;
+
+            @include border-radius(0.25em 0.25em 0 0);
+            @media (max-width: $collapse) {
+                @include border-radius(0);
+            }
+
+            img {
+                @include border-radius(50%);
+            }
+
+            h3 {
+                margin: 0.25em;
+            }
+        }
+
+        .middle {
+            border-top: 1px solid $border-color;
+            background: $background-mid;
+            padding: 2.5em;
+
+            &.full {
+                padding: 0 !important;
+            }
+
+            &.custom {
+                padding: 2.5em 2.5em 1em;
+            }
+        }
+
+        .last {
+            text-align: center;
+            padding: 1.5em;
+            background: $background-bot;
+            border-top: 1px solid $border-color;
+
+            @include border-radius(0 0 0.25em 0.25em);
+            @media (max-width: $collapse) {
+                @include border-radius(0);
+            }
+
+            span {
+                &:not(:first-child)::before {
+                    content: "•";
+                    padding: 0 0.5em;
+                }
+
+                a {
+                    color: inherit !important;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &.home {
+        padding-top: 3em;
+        max-width: 845px;
+    }
+
+    &.project {
+        margin: 2em auto;
+
+        @media (max-width: $collapse) {
+            margin: 0 auto !important;
+        }
+
+        .block {
+            .first {
+                color: inherit !important;
+                text-decoration: none;
+                text-align: left;
+                text-transform: uppercase;
+                font-weight: 500;
+                vertical-align: bottom;
+
+                span {
+                    a {
+                        color: inherit !important;
+                        text-decoration: none;
+                    }
+
+                    &:not(:first-child)::before {
+                        content: "/";
+                        margin: 0 8px;
+                        color: #CCCCCC;
+                    }
+                }
+            }
+
+            .middle {
+                .shake {
+                    .logo {
+                        //@include border-radius(50%);
+                    }
+
+                    h2 {
+                        margin: 0.2em 0;
+                    }
+
+                    .screen {
+                        @include border-radius(5px);
+                        box-shadow: 0px 4px 13px -2px rgba(0, 0, 0, 0.25);
+                        text-align: center;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
