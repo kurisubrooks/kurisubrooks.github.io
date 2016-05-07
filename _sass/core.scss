@@ -27,6 +27,11 @@ img {
     max-width: 100%;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid $border-color;
+}
+
 main {
     margin: 4em auto;
     padding: 0 20px;
@@ -57,9 +62,9 @@ main {
                 @include border-radius(0);
             }
 
-            img {
+            /*img {
                 @include border-radius(50%);
-            }
+            }*/
 
             h3 {
                 margin: 0.25em;
