@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>日本テレビ</title>
+    <style>
+        html,body {height: 100%;width: 100%;margin: 0;padding: 0;border: none;overflow: hidden;font-family: sans-serif;}
+        .container {height: 100%;display: flex;}
+        .video {flex-grow: 1;height: 100%;background: #555;}
+        .video #tv {height: 100%;width: 100%;}
+        .chat {width: 360px;height: 100%;background: rgb(242,242,242);}
+        @media (max-width: 762px) {.chat { display: none; }}
+        .chat .remote {position: relative;z-index: 100;text-align: center;margin: 5px auto -8px;left: 0;right: 0;}
+        .chat a {color: #555 !important;text-decoration: none;margin-left: 5px;}
+        .chat a:hover {text-decoration: underline;}
+    </style>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-62015739-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="video">
+            <iframe src="http://vaughnlive.tv/embed/video/sherming5555?autoplay=true" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    marginwidth="0" 
+                    marginheight="0" 
+                    allowTransparency="true" 
+                    allowFullScreen="true" 
+                    seamless 
+                    height="100%" 
+                    width="100%" 
+                    style="border: none; overflow: hidden;" 
+                    name="tv">
+            </iframe>
+        </div>
+        <div class="chat">
+            <div class="remote">
+                <a href="http://vaughnlive.tv/embed/video/sherming5555?autoplay=true" target="tv">NTV</a> 
+                <a href="http://vaughnlive.tv/embed/video/sherming777?autoplay=true" target="tv">NHK</a> 
+                <a href="http://vaughnlive.tv/embed/video/sherming6666?autoplay=true" target="tv">TBS</a> 
+                <a href="http://vaughnlive.tv/embed/video/sherming7777?autoplay=true" target="tv">Fuji TV</a> 
+                <a href="http://vaughnlive.tv/embed/video/sherming3333?autoplay=true" target="tv">TV Tokyo</a> 
+                <a href="http://vaughnlive.tv/embed/video/sherming4444?autoplay=true" target="tv">TV Asahi</a>
+            </div>
+            <iframe frameborder="0" 
+                    scrolling="no" 
+                    id="chat_embed" 
+                    src="http://www.twitch.tv/kurisubrooks/chat" 
+                    height="99%"
+                    width="360px">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
