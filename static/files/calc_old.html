@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Steven - Pay Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../../assets/css/caramel.min.css" type="text/css" rel="stylesheet">
+
+	<script type="text/javascript">
+		function calculate() {
+			var weekday = 11.8700;
+			var saturday = 12.8219;
+			var sunday = 18.9920;
+			var holiday = 26.1163;
+
+			var number1 = document.getElementById("weekday_input").value * weekday;
+			var number2 = document.getElementById("saturday_input").value * saturday;
+			var number3 = document.getElementById("sunday_input").value * sunday;
+			var number4 = document.getElementById("holiday_input").value * holiday;
+
+			document.getElementById("result1").innerHTML = "$" + roundTo(number1, 2);
+			document.getElementById("result2").innerHTML = "$" + roundTo(number2, 2);
+			document.getElementById("result3").innerHTML = "$" + roundTo(number3, 2);
+			document.getElementById("result4").innerHTML = "$" + roundTo(number4, 2);
+
+			document.getElementById("result5").innerHTML = "$" + roundTo(number1 + number2 + number3 + number4, 2);
+		}
+
+		function roundTo(float, length) {
+			return +(Math.round(float + "e+" + length) + "e-" + length);
+		}
+	</script>
+
+	<style>
+		body {
+			padding: 10px;
+		}
+
+        .table {
+            max-width: 600px;
+        }
+
+        #result1, #result2, #result3, #result4, #result5 {
+            display: inline-block;
+            padding-top: 12px;
+            font-weight: bold;
+        }
+
+		input[type=number] {
+            margin: 5px 0;;
+			max-width: 120px;
+		}
+
+		input[type=button] {
+            margin: 5px 0;
+			-webkit-appearance: none
+		}
+	</style>
+</head>
+<body>
+
+	<h5>Pay Calculator</h5>
+	<br>
+
+	<table class="table">
+		<tr>
+			<td><input type="number" id="weekday_input" placeholder="Weekday Hours"></td>
+			<td><div id="result1"></div></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="saturday_input" placeholder="Saturday Hours"></td>
+			<td><div id="result2"></div></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="sunday_input" placeholder="Sunday Hours"></td>
+			<td><div id="result3"></div></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="holiday_input" placeholder="Holiday Hours"></td>
+			<td><div id="result4"></div></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn info" value="Calculate" onClick="calculate()"></td>
+			<td><div id="result5">Total: </div></td>
+		</tr>
+	</table>
+
+</body>
+</html>

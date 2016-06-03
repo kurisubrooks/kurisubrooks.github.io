@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Steven Woodward - Pay Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script>
+        var rates = {
+            weekday: 14.24,
+            saturday: 15.3820,
+            sunday: 22.7840,
+            holiday: 31.32
+        };
+
+        function calculate() { 
+            $("#result1").text("$" + round($("#weekday").val() * rates.weekday));
+            $("#result2").text("$" + round($("#saturday").val() * rates.saturday));
+            $("#result3").text("$" + round($("#sunday").val() * rates.sunday));
+            $("#result4").text("$" + round($("#holiday").val() * rates.holiday));
+            $("#result5").text("$" + round($("#weekday").val() * rates.weekday + $("#saturday").val() * rates.saturday + $("#sunday").val() * rates.sunday + $("#holiday").val() * rates.holiday));
+            $('#modal1').openModal();
+        }
+
+        function round(float) {
+            return (Math.round(float * 100) / 100);
+        }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper blue">
+            <a class="brand-logo center">Calculator</a>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 20px;">
+        <div class="card">
+            <div class="card-content">
+		<p>Fuck you Steven why do you only talk to me when you want something</p><br>
+                <input type="number" id="weekday" placeholder="Weekday Hours"><br>
+                <input type="number" id="saturday" placeholder="Saturday Hours"><br>
+                <input type="number" id="sunday" placeholder="Sunday Hours"><br>
+                <input type="number" id="holiday" placeholder="Holiday Hours">
+            </div>
+
+            <div class="card-action">
+                <a href="#" class="blue-text" onClick="calculate()"><b>Calculate</b></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Result:</h4>
+            <p>
+                <b>Weekday Hours:</b> <span id="result1"></span><br>
+                <b>Saturday Hours:</b> <span id="result2"></span><br>
+                <b>Sunday Hours:</b> <span id="result3"></span><br>
+                <b>Holiday Hours:</b> <span id="result4"></span><br><br>
+                <b>Total:</b> <span id="result5"></span>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+       
