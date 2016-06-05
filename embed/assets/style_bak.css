@@ -1,0 +1,89 @@
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: none;
+}
+
+html, body {
+    font-family: "Roboto Mono", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", monospace;
+    background-color: #E44242;
+    background: #333333;
+    color: #FFFFFF;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 1px 0;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #DDD;
+}
+
+.container {
+    height: calc(100% - 70px);
+    position: relative;
+}
+
+.time {
+    text-align: center;
+    font-size: 18px;
+}
+
+.time #time {
+    padding-top: 14px;
+}
+
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 1050px;
+}
+
+.alert .icon {
+    display: inline-block;
+    text-align: center;
+    width: 145px;
+}
+
+.alert .warning {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    background: #FFF;
+    font-size: 26px;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 500;
+    top: 0;
+    left: 0;
+}
+
+.overlay .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

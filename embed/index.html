@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shake</title>
+    <link href="./assets/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.3/moment-timezone-with-data.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="./client.js"></script>
+</head>
+<body>
+
+    <div class="time">
+        <div id="time">...</div>
+        <div id="previous">Previous Details</div>
+    </div>
+
+    <div class="container">
+        <div class="icon">
+            <img src="./assets/shake.png" width="90px">
+        </div>
+        <div class="alert">
+            <div class="warning">
+                <div id="epicenter">...</div>
+                <div class="details">
+                    <div id="seismic">
+                        <span id="key">Seismic</span>
+                        <span id="value">...</span>
+                    </div>
+                    <div id="magnitude">
+                        <span id="key">Magnitude</span>
+                        <span id="value">...</span>
+                    </div>
+                    <div id="depth">
+                        <span id="key">Depth</span>
+                        <span id="value">...</span><span id="unit">km</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="message">
+            Connecting to Server...<br>
+            <h6>If this takes more than a couple seconds, check your internet connection.</h6>
+        </div>
+    </div>
+
+</body>
+</html>
