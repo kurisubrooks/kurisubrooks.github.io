@@ -7,13 +7,8 @@ var sound_info = new Audio("./assets/info.mp3");
 
 $(document).ready(function() {
     socket.on("connect", function() {
-        socket.emit("open", { version: 2 });
+        socket.emit("auth", { version: 2.1 });
         modal("close");
-    });
-
-    socket.on("message", function(data) {
-        if (!data.ok) modal("open", data.message);
-        console.log(data);
     });
 
     socket.on("reconnect", function() {
@@ -27,11 +22,14 @@ $(document).ready(function() {
     });
 
     socket.on("auth", function(data) {
+        console.log(data);
+
         if (data.ok) {
             console.info("Connected to Shake");
             $("body").css("background", "#333");
         } else {
             console.error("Connection to Shake was refused. Client disconnected.");
+            modal("open", "Can't Connect. Please contact the Webmaster.");
         }
     });
 
@@ -61,7 +59,7 @@ $(document).ready(function() {
         if (type === 1) {
             $("body").css("background", "#E44242");
         }
-        
+
         if (data.alarm) sound_alarm.play();
         else if (type === 1) sound_alert.play();
         else sound_info.play();
