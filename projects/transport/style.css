@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+body { font-family: "Frank"; }
+div { margin-bottom: 10px; }
+
+@font-face {
+    font-family: "Frank";
+    font-weight: 400;
+    src: url(fonts/tpfrank-regular.eot);
+    src: url(fonts/tpfrank-regular.eot#?iefix) format("embedded-opentype"),
+         url(fonts/tpfrank-regular.woff) format("woff"),
+         url(fonts/tpfrank-regular.ttf) format("truetype");
+}
+
+.right { float: right; }
+.left { float: left; }
+.inline { display: inline-block !important; }
+.block { display: block !important; }
+
+/*
+// Station Signs (Station Name)
+*/
+.station_sign {
+    display: block;
+    font-family: "Frank";
+    background: rgb(241, 86, 26);
+    color: #FFF;
+    font-size: 60px;
+    text-align: center;
+    padding: 20px;
+}
+
+/*
+// Sydney Transport Signs (Train, Bus, Ferry, etc)
+*/
+.transport_sign {
+    display: inline-block;
+    font-family: "Frank";
+    color: #FFF;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    border-radius: 50%;
+    border: 6px solid #FFF;
+    padding-top: 7px;
+    text-align: center;
+}
+
+.transport_sign.service_trains   { background: rgb(246, 143, 30); }
+.transport_sign.service_bus      { background: rgb(0,   178, 239); }
+.transport_sign.service_ferry    { background: rgb(0,   170, 91); }
+.transport_sign.service_tram     { background: rgb(236, 26,  59); }
+
+/*
+// Sydney Trains Line Indicators
+*/
+.train_line {
+    display: inline-block;
+    font-family: "Frank";
+    color: #FFF;
+    font-size: 60px;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.train_line.line_t1  { background: rgb(241, 141, 0); }
+.train_line.line_t2  { background: rgb(77, 156, 45); }
+.train_line.line_t3  { background: rgb(242, 103, 43); }
+.train_line.line_t4  { background: rgb(0, 130, 189); }
+.train_line.line_t5  { background: rgb(195, 74, 153); }
+.train_line.line_t6  { background: rgb(54, 96, 147); }
+.train_line.line_t7  { background: rgb(154, 164, 169); }
+
+.train_line.line_text.line_t1  { background: transparent; color: rgb(241, 141, 0); }
+.train_line.line_text.line_t2  { background: transparent; color: rgb(77, 156, 45); }
+.train_line.line_text.line_t3  { background: transparent; color: rgb(242, 103, 43); }
+.train_line.line_text.line_t4  { background: transparent; color: rgb(0, 130, 189); }
+.train_line.line_text.line_t5  { background: transparent; color: rgb(195, 74, 153); }
+.train_line.line_text.line_t6  { background: transparent; color: rgb(54, 96, 147); }
+.train_line.line_text.line_t7  { background: transparent; color: rgb(154, 164, 169); }
+
+/*
+// Station Platform Signs
+*/
+.platform_signs {
+    background: rgb(35, 35, 35);
+    height: auto;
+    font-size: 50px;
+    color: #FFF;
+    padding: 30px 60px;
+    border-left: 5px solid rgb(241, 86, 26);
+    border-right: 5px solid rgb(241, 86, 26);
+}
+
+.platform_signs .material-icons {
+    vertical-align: middle !important;
+    font-size: 52px !important;
+    margin-bottom: 4px;
+}
+
+.platform_signs .focus {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 102px !important;
+}
+
+.platform_signs .text {
+    display: inline-block;
+    padding: 0 20px;
+    vertical-align: middle;
+}
