@@ -27,6 +27,7 @@ body { font-family: "Frank"; color: rgb(35, 35, 35); }
     font-size: 60px;
     text-align: center;
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 /*
@@ -43,6 +44,7 @@ body { font-family: "Frank"; color: rgb(35, 35, 35); }
     border: 6px solid #FFF;
     padding-top: 7px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .transport_sign.service_trains   { background: rgb(246, 143, 30); }
@@ -60,6 +62,7 @@ body { font-family: "Frank"; color: rgb(35, 35, 35); }
     font-size: 60px;
     border-radius: 14px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .train_line.line_text {
@@ -184,7 +187,6 @@ body { font-family: "Frank"; color: rgb(35, 35, 35); }
 */
 .station_monitor {
     width: 600px;
-    height: 380px;
 }
 
 .station_monitor .monitor_header {
