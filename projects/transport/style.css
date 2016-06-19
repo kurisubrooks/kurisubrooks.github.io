@@ -138,10 +138,13 @@ div { margin-bottom: 10px; }
     border: 6px solid #FFF;
 }
 
-.station_monitor .monitor_content .monitor_service .monitor_title {
-    padding-left: 110px;
+.station_monitor .monitor_content .monitor_service {
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
+}
+
+.station_monitor .monitor_content .monitor_service .monitor_title {
+    padding-left: 110px;
 }
 
 .station_monitor .monitor_content .monitor_service .monitor_title .monitor_service_title {
@@ -151,6 +154,17 @@ div { margin-bottom: 10px; }
 
 .station_monitor .monitor_content .monitor_service .monitor_title .monitor_service_subheader {
     font-size: 24px;
+}
+
+.station_monitor .monitor_content .monitor_service .monitor_platform {
+    text-align: right;
+    font-size: 20px;
+}
+
+.station_monitor .monitor_content .monitor_service .monitor_platform .monitor_platform_number {
+    display: block;
+    color: rgb(241, 86, 26);
+    font-size: 62px;
 }
 
 .station_monitor .monitor_content .monitor_stops {
