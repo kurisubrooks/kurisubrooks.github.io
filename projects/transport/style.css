@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
-body { font-family: "Frank"; }
-div { margin-bottom: 10px; }
+body { font-family: "Frank"; color: rgb(35, 35, 35); }
+/*div { margin-bottom: 10px; }*/
 
 @font-face {
     font-family: "Frank";
@@ -15,12 +15,12 @@ div { margin-bottom: 10px; }
 .left { float: left; }
 .inline { display: inline-block !important; }
 .block { display: block !important; }
+.center { text-align: center; }
 
 /*
 // Station Signs (Station Name)
 */
 .station_sign {
-    display: block;
     font-family: "Frank";
     background: rgb(241, 86, 26);
     color: #FFF;
@@ -94,6 +94,71 @@ div { margin-bottom: 10px; }
     padding: 30px 60px;
     border-left: 5px solid rgb(241, 86, 26);
     border-right: 5px solid rgb(241, 86, 26);
+    margin-bottom: 10px;
+}
+
+.platform_signs.tiled {
+    display: flex;
+    padding: 0;
+    border: none !important;
+}
+
+.platform_signs.tiled .platform_tile {
+    flex-grow: 1;
+}
+
+.platform_signs.tiled .platform_tile.platform {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 180px;
+}
+
+.platform_signs.tiled .platform_tile.platform .platform_tile_title {
+    text-align: center;
+    border-right: 2px solid rgb(35, 35, 35);
+}
+
+.platform_signs.tiled .platform_tile.platform .platform_tile_text {
+    text-align: center;
+    padding: 5px 40px;
+    font-size: 120px;
+    border-right: 2px solid #333;
+}
+
+.platform_signs.tiled .platform_tile .platform_tile_title {
+    background: rgb(241, 86, 26);
+    color: rgb(35, 35, 35);
+    font-size: 26px;
+    padding: 4px 20px;
+}
+
+.platform_signs.tiled .platform_tile .platform_tile_text {
+    padding: 20px 20px;
+}
+
+.platform_signs.tiled .platform_tile .platform_tile_subtext {
+    display: block;
+    padding-top: 10px;
+    font-size: 36px;
+    color: #DDD;
+}
+
+.platform_signs.top {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 12px solid rgb(241, 86, 26) !important;
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+}
+
+.platform_signs.large {
+    font-size: 60px;
+    padding: 10px;
+}
+
+.platform_signs.large .material-icons {
+    font-size: 70px !important;
 }
 
 .platform_signs .material-icons {
@@ -115,7 +180,7 @@ div { margin-bottom: 10px; }
 }
 
 /*
-// Monitor
+// Train Timetable Monitors
 */
 .station_monitor {
     width: 600px;
