@@ -62,6 +62,11 @@ div { margin-bottom: 10px; }
     padding: 10px;
 }
 
+.train_line.line_text {
+    display: inline;
+    background: transparent !important;
+}
+
 .train_line.line_t1  { background: rgb(241, 141, 0); }
 .train_line.line_t2  { background: rgb(77, 156, 45); }
 .train_line.line_t3  { background: rgb(242, 103, 43); }
@@ -70,13 +75,13 @@ div { margin-bottom: 10px; }
 .train_line.line_t6  { background: rgb(54, 96, 147); }
 .train_line.line_t7  { background: rgb(154, 164, 169); }
 
-.train_line.line_text.line_t1  { background: transparent; color: rgb(241, 141, 0); }
-.train_line.line_text.line_t2  { background: transparent; color: rgb(77, 156, 45); }
-.train_line.line_text.line_t3  { background: transparent; color: rgb(242, 103, 43); }
-.train_line.line_text.line_t4  { background: transparent; color: rgb(0, 130, 189); }
-.train_line.line_text.line_t5  { background: transparent; color: rgb(195, 74, 153); }
-.train_line.line_text.line_t6  { background: transparent; color: rgb(54, 96, 147); }
-.train_line.line_text.line_t7  { background: transparent; color: rgb(154, 164, 169); }
+.train_line.line_text.line_t1  { color: rgb(241, 141, 0); }
+.train_line.line_text.line_t2  { color: rgb(77, 156, 45); }
+.train_line.line_text.line_t3  { color: rgb(242, 103, 43); }
+.train_line.line_text.line_t4  { color: rgb(0, 130, 189); }
+.train_line.line_text.line_t5  { color: rgb(195, 74, 153); }
+.train_line.line_text.line_t6  { color: rgb(54, 96, 147); }
+.train_line.line_text.line_t7  { color: rgb(154, 164, 169); }
 
 /*
 // Station Platform Signs
