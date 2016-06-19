@@ -1,0 +1,113 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+.center {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280pt;
+}
+
+.overlay {
+    display: none;
+    color: #000;
+    font-size: 22px;
+}
+
+.search h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    margin: 0 0 10px;
+}
+
+.search #search-box {
+    font: inherit;
+    height: 22pt;
+    width: 260pt;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.search .error {
+    display: none;
+    border-radius: 3px;
+    background: #E75F5F;
+    padding: 8px 12px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.weather-container .weather-location {
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    margin: 0 0 10px;
+}
+
+.weather {
+    display: none;
+    font-size: 16px;
+    color: #222;
+    padding: 16px 20px;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.weather .weather-gutter {
+    float: right;
+    margin-top: -5px;
+}
+
+.weather .weather-condition {
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.weather .weather-time {
+    font-size: 14px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.weather .weather-temp {
+    font-size: 70px;
+    font-weight: 300;
+    text-shadow: 0 1px 4gba(0, 0, 0, 0.1);
+}
+
+.weather .weather-temp sup {
+    font-size: 38px;
+}
+
+.weather .weather-feels {
+    font-size: 14px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+input:active,
+input:focus {
+    outline: none;
+}
