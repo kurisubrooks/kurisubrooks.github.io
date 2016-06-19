@@ -186,6 +186,7 @@ body { font-family: "Frank"; color: rgb(35, 35, 35); }
 // Train Timetable Monitors
 */
 .station_monitor {
+    display: inline-block;
     width: 600px;
 }
 
@@ -248,8 +249,8 @@ body { font-family: "Frank"; color: rgb(35, 35, 35); }
 
 .station_monitor .monitor_content .monitor_stops marquee {
     display: inline-block;
-    width: 460px;
     height: 200px;
+    width: 400px;
 }
 
 .station_monitor .monitor_content .monitor_stops ol {
